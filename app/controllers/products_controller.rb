@@ -18,4 +18,9 @@ class ProductsController < ApplicationController
     @product = Product.third
     render template: "products/show"
   end
+
+  def first_name
+    first_name = Product.first.name
+    render json: { first_product_name: first_name }
+  end
 end

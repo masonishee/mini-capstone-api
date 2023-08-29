@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/first_product", controller: "products", action: "first"
   get "/second_product", controller: "products", action: "second"
   get "/third_product", controller: "products", action: "third"
+  get "/first_name", controller: "products", action: "first_name"
 end
