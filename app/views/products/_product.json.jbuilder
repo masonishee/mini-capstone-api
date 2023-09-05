@@ -8,3 +8,4 @@ json.updated_at product.updated_at
 json.tax product.tax
 json.total product.total
 json.is_discounted? product.is_discounted?
+json.supplier product.supplier
