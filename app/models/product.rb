@@ -6,6 +6,7 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :description, length: { in: 1..500 }
 
+  has_many :orders
   belongs_to :supplier
   has_many :images
 
