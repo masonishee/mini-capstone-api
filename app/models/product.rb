@@ -6,9 +6,12 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :description, length: { in: 1..500 }
 
-  has_many :orders
   belongs_to :supplier
   has_many :images
+  has_many :category_products
+  has_many :categories, through: :category_products
+  has_many :carted_products
+  has_many :orders, through: :carted_products
 
   def tax
     tax_rate = 0.09

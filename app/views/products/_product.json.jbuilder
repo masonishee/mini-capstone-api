@@ -1,6 +1,6 @@
 json.id product.id
 json.name product.name
-json.price number_to_currency(product.price)
+json.price product.price
 json.images product.images
 json.description product.description
 json.created_at product.created_at
