@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+      .limit(params[:limit])
+      .offset(params[:offset])
     render :index
   end
 
