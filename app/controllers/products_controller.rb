@@ -2,9 +2,8 @@ class ProductsController < ApplicationController
   before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    @products = Product.all
-      .limit(params[:limit])
-      .offset(params[:offset])
+    @products = Product.includes(:supplier, :images, :categories).all
+
     render :index
   end
 
